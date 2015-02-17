@@ -32,39 +32,12 @@ if ( function_exists('register_sidebar') )
 	));
 	
 //THUMBNAILS
-add_theme_support( 'post-thumbnails' ); 
 
 add_theme_support( 'post-thumbnails' );
 set_post_thumbnail_size( 1000, 571 );
 add_image_size( 'single-post-thumbnail', 1000, 9999 ); // Permalink thumbnail size
 	
 	
-
-//BOOTSTRAP BAR OVERLAY
-
-add_action('wp_head', 'mbe_wp_head');
-
-add_filter('body_class', 'mbe_body_class');
-
-
-function mbe_body_class($classes){
-    if(is_user_logged_in()){
-        $classes[] = 'body-logged-in';
-    } else{
-        $classes[] = 'body-logged-out';
-    }
-    return $classes;
-}	
-
-function mbe_wp_head(){
-    echo '<style>'.PHP_EOL;
-    echo 'body{ padding-top: 70px !important; }'.PHP_EOL;
-    // Using custom CSS class name.
-    echo 'body.body-logged-in .navbar-fixed-top{ top: 28px !important; }'.PHP_EOL;
-    // Using WordPress default CSS class name.
-    echo 'body.logged-in .navbar-fixed-top{ top: 28px !important; }'.PHP_EOL;
-    echo '</style>'.PHP_EOL;
-}
 
 //GOOGLE ANALYTICS
 add_action('wp_footer', 'add_googleanalytics');
