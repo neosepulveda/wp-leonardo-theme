@@ -1,2 +1,2 @@
-# wpvirginia
-Wordpress theme responsive with Bootstrap for www.virginiadecolombani.com
+# wpleonardo
+Wordpress theme responsive with Bootstrap for www.rosemaryreed.com
