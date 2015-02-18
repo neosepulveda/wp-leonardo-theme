@@ -7,37 +7,40 @@ get_header(); ?>
 
 	<div class="row">
 		<div class="col-md-2 col-xs-4 firstCol">  <!-- First collumn -->
-			<div class="header-logo">
-				<?php
-					if( get_field('headerimg') ): ?>
-						<img src="<?php the_field('headerimg'); ?>" class="img-responsive" />
-						<?php 
-					endif;
-				?>
-			</div>
+			<div class="header-container">
+				<div class="header-logo">
+					<?php
+						if( get_field('headerimg') ): ?>
+							<img src="<?php the_field('headerimg'); ?>" class="img-responsive" />
+							<?php 
+						endif;
+					?>
+				</div>
 			
-			<div class="navigation-menu">				
-				<?php wp_page_menu('show_home=1&exclude=5,9,23&menu_class=page-navi&sort_column=menu_order'); ?>				
-			</div>
+								
+				<?php wp_page_menu('show_home=1&exclude=5,9,23&menu_class=navigation-menu&sort_column=menu_order'); ?>				
+							
+			
+				<div class="social-network">
+					<div class="col-md-12 col-xs-12">
+						<a href="https://www.facebook.com/infinityhouse14"><i class="fa fa-facebook-square fa-2x"></i></a>
+						<a href="https://twitter.com/infinityhouseuk"><i class="fa fa-twitter-square fa-2x"></i></a>
+						<a href="https://www.pinterest.com/infinityhouse14/"><i class="fa fa-pinterest-square fa-2x"></i></a>
+					</div>				
+				</div>
+				
+				<div class="col-md-12">
+					<h3 class="latest-news">Latest News</h3>
+				</div>
+			</div> <!--header-container-->
 			
 			
 			
-			<div class="social-network">
-				<div class="col-md-12 col-xs-12" id="social-network">
-					<a href="https://www.facebook.com/infinityhouse14"><i class="fa fa-facebook-square fa-2x"></i></a>
-					<a href="https://twitter.com/infinityhouseuk"><i class="fa fa-twitter-square fa-2x"></i></a>
-					<a href="https://www.pinterest.com/infinityhouse14/"><i class="fa fa-pinterest-square fa-2x"></i></a>
-				</div>				
-			</div>
-			
-			
-			
+			<div class="posts-container">
 			<div class="col-md-12">
-				<h3>Latest News</h3>
-			
 			
 				<?php
-					query_posts('cat=news');
+					query_posts('cat=news&posts_per_page=6');
 					while (have_posts()) : the_post();
 						?>	<div class="news-overlay"> <?php
 						// check if the post has a Post Thumbnail assigned to it.
@@ -63,6 +66,7 @@ get_header(); ?>
 				
 				
 			</div> <!--col-md-12-->
+			</div> <!-- posts-container -->
 		</div> <!-- First collumn -->
 		
 		<div class="col-md-2 col-xs-4 columns"><!-- Second column -->

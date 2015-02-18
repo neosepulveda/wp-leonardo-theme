@@ -35,7 +35,7 @@ if ( function_exists('register_sidebar') )
 
 add_theme_support( 'post-thumbnails' );
 set_post_thumbnail_size( 1000, 571 );
-add_image_size( 'single-post-thumbnail', 1000, 9999 ); // Permalink thumbnail size
+add_image_size( 'single-post-thumbnail', 1000, 1000 ); // Permalink thumbnail size
 	
 	
 

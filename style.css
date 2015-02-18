@@ -17,14 +17,52 @@ This is an example theme to go along with the Treehouse blog post on <a href="ht
 @import url('bootstrap/css/bootstrap-responsive.css');
 
 
-/* FONTS */
-
-
-.firstCol {
-	background: #FFFFFF url("images/page_bkgd.png") repeat-x 0 0;
+html, body {
+    height:100%;
 }
 
+/* FONTS */
+@font-face {
+	font-family: UniSansSemiBold;
+	src: url('bootstrap/fonts/uni-sans-semi-bold-webfont.eot') format('eot'),
+		url('bootstrap/fonts/uni-sans-semi-bold-webfont.woff') format('woff'), 
+		url('bootstrap/fonts/uni-sans-semi-bold-webfont.ttf') format('truetype'), 
+		url('bootstrap/fonts/uni-sans-semi-bold-webfont.svg') format('svg');
+		font-weight: 600;
+}
 
+@font-face {
+	font-family: HelveticaNeue;
+	src: url('bootstrap/fonts/helveticaneue-light-webfont.eot') format('eot'),
+		url('bootstrap/fonts/helveticaneue-light-webfont.woff') format('woff'), 
+		url('bootstrap/fonts/helveticaneue-light-webfont.ttf') format('truetype'), 
+		url('bootstrap/fonts/helveticaneue-light-webfont.svg') format('svg');
+		font-weight: 500;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: UniSansSemiBold;
+	font-weight: bold;
+}
+
+p {
+	font-family: UniSansSemiBold;
+}
+
+.firstCol {
+	background: #FFFFFF url("images/page_bkgd2.png") repeat-x 0 0;
+}
+
+.header-container {
+	width:100%;
+	/*height:20%; */
+	padding-bottom: 2em;
+}
+
+.posts-container {
+	width:100%;
+	/*height:60%; */
+}
 
 .header-logo {
 	padding-top: 2em;
@@ -34,12 +72,41 @@ This is an example theme to go along with the Treehouse blog post on <a href="ht
 .navigation-menu {
 }
 
-#social-network {
-	padding-left:0px;
-	padding-right:0px;
+.navigation-menu ul{
+	list-style-type: none;
+	margin: 0;
+	padding:15px;
+}
+
+.navigation-menu ul li{
+	font-family: UniSansSemiBold;
+	font-size: 18px;
+}
+
+.navigation-menu ul li a{
+	color: #4B4D4F;
+	font-family: UniSansSemiBold,Arial;
+	text-transform: uppercase;
+	font-size: 14px;
+	text-decoration: none;
+}
+
+.navigation-menu ul li a:hover{
+	background-color: #DDDDDD;
+	font-family: UniSansSemiBold,Arial;
+	text-transform: uppercase;
+	font-size: 14px;
+	text-decoration: none;
 }
 
 /* NEWS */
+.latest-news {
+	color: #4B4D4F;
+	font-family: UniSansSemiBold,Arial;
+	text-transform: uppercase;
+	font-size: 14px;
+}
+
 .news-overlay {
 	position: relative;
 	float: left;
@@ -103,12 +170,19 @@ This is an example theme to go along with the Treehouse blog post on <a href="ht
     top: 45%;
     left: 0;
     width: 100%;
-    background-color: rgba(0,0,0,0.5);
+    background-color: rgba(0,0,0,0.7);
     color: #fff;
 }
 
 .text-overlay h2 {
 	text-transform: uppercase;
+	font-size: 36px;
+	font-height: 36px;
+}
+
+.text-overlay p {
+	font-size: 16px;
+	font-family: HelveticaNeue,arial,serif;
 }
 
 
@@ -131,6 +205,13 @@ This is an example theme to go along with the Treehouse blog post on <a href="ht
 .heading-text {
 	padding-top: 2em;
 	padding-bottom: 2em;
+}
+
+.heading-text p {
+	font-size: 12px;
+	line-height: 1.5;
+	text-transform: uppercase;
+	color: #f5f5f5;
 }
 
 
