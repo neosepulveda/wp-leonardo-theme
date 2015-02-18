@@ -20,56 +20,197 @@ get_header(); ?>
 				<?php wp_page_menu('show_home=1&exclude=5,9,23&menu_class=page-navi&sort_column=menu_order'); ?>				
 			</div>
 			
+			
+			
 			<div class="social-network">
-				<div class="col-md-4 col-xs-4">
-					<a href="https://www.facebook.com/infinityhouse14"><img src="<?php echo get_template_directory_uri(); ?>/images/facebook.png" class="img-responsive"></a>					
-				</div>
-				<div class="col-md-4 col-xs-4">
-					<a href="https://twitter.com/infinityhouseuk"><img src="<?php echo get_template_directory_uri(); ?>/images/twitter.png" class="img-responsive"></a>
-				</div>
-				<div class="col-md-4 col-xs-4">
-					<a href="https://www.pinterest.com/infinityhouse14/"><img src="<?php echo get_template_directory_uri(); ?>/images/pinterest.png" class="img-responsive"></a>
+				<div class="col-md-12 col-xs-12" id="social-network">
+					<a href="https://www.facebook.com/infinityhouse14"><i class="fa fa-facebook-square fa-2x"></i></a>
+					<a href="https://twitter.com/infinityhouseuk"><i class="fa fa-twitter-square fa-2x"></i></a>
+					<a href="https://www.pinterest.com/infinityhouse14/"><i class="fa fa-pinterest-square fa-2x"></i></a>
 				</div>				
 			</div>
 			
+			
+			
 			<div class="col-md-12">
 				<h3>Latest News</h3>
-			</div>
 			
-			<?php
-				query_posts('cat=news');
-				while (have_posts()) : the_post();
-					
-					// check if the post has a Post Thumbnail assigned to it.
-					if ( has_post_thumbnail() ) {
-						?><a href="<?php echo get_permalink(); ?>"> <?php the_post_thumbnail( 'single-post-thumbnail', array('class' => 'img-responsive')); ?> </a> <?php
-					}					
-					?> <a href="<?php echo get_permalink(); ?>"><h3> <?php the_title(); ?> </h3></a>
-
-					<?php
-				endwhile;
-			?>
+			
+				<?php
+					query_posts('cat=news');
+					while (have_posts()) : the_post();
+						?>	<div class="news-overlay"> <?php
+						// check if the post has a Post Thumbnail assigned to it.
+						if ( has_post_thumbnail() ) {
+							?>
+								
+								<a href="<?php echo get_permalink(); ?>"> <?php the_post_thumbnail( 'single-post-thumbnail', array('class' => 'img-responsive')); ?> </a> <?php
+						}					
+						?> 			
+								<div class="news-text-overlay">
+									<div class="date">
+										<?php the_date(); ?>
+									</div>
+									<div class="title">
+										<a href="<?php echo get_permalink(); ?>"><p> <?php the_title(); ?> </p></a>
+									</div>									
+								</div> <!--news-text-overlay-->	
+							</div> <!--news-overlay-->
+						<?php
+					endwhile;
+				?>
+				<?php wp_reset_query();  // Restore global post data stomped by the_post(). ?>
+				
+				
+			</div> <!--col-md-12-->
 		</div> <!-- First collumn -->
 		
-		<div class="col-md-2 col-xs-4"><!-- Second collumn -->
-			<img src="http://placehold.it/500x3000" class="img-responsive">
-		</div><!-- Second collumn -->
+		<div class="col-md-2 col-xs-4 columns"><!-- Second column -->
+			<div class="img-overlay">
+				<?php
+					if( get_field('column-image1') ): ?>
+						<img src="<?php the_field('column-image1'); ?>" class="img-responsive" />
+						<?php 
+					endif;
+				?>
+				<div class="background-overlay">
+					<div class="col-md-12 col-xs-12">
+						<div class="heading-text">
+							<p>WELCOME TO THE OFFICIAL WEBSITE FOR ROSEMARY REED</p>
+							<p>YOU'LL FIND NEWS ON ROSEMARY'S CURRENT WORK, PRODUCTIONS AND HER EFFORTS TO ENSURE A HEALTHIER FUTURE FOR HUMANITY AND THE PLANET</p>
+						</div>
+						<div class="twitter-button-container">
+							<a href="https://twitter.com/InfinityHouseUk" class="twitter-follow-button" data-show-count="false">Follow @InfinityHouseUk</a>
+							<script>
+								!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
+							</script>
+						</div>
+						<div class="twitter-widget-container">
+							<a class="twitter-timeline" href="https://twitter.com/infinityhouseUk" data-widget-id="568033275059654656" data-chrome="noborders noheader transparent noscrollbar">Tweets by @InfinityHouseUk</a>
+							<script>
+								!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+							</script>
+						</div>
+					</div>
+				</div>	
+			</div> <!-- img-overlay-->
+		</div><!-- Second column -->
 		
-		<div class="col-md-2 col-xs-4"><!-- Third collumn -->
-			<img src="http://placehold.it/500x3000" class="img-responsive">
-		</div><!-- Third collumn -->
+		<div class="col-md-2 col-xs-4 columns"><!-- Third column -->
+			<div class="column-overlay">
+				<?php
+					if( get_field('column-image2') ): ?>
+						<img src="<?php the_field('column-image2'); ?>" class="img-responsive" />
+						<?php 
+					endif;
+				?>
+				
+				<div class="text-overlay">
+					<div class="col-md-12 col-xs-12">
+						<?php
+							if( get_field('title-1') ): ?>
+								<h2><?php the_field('title-1'); ?></h2>
+							<?php 
+							endif;
+						?>
+						
+						<?php
+							if( get_field('subtitle-1') ): ?>
+								<p><?php the_field('subtitle-1'); ?></p>
+							<?php 
+							endif;
+						?>
+					</div>
+				</div>
+			</div><!-- column overlay -->
+		</div><!-- Third column -->
 		
-		<div class="col-md-2 col-xs-4"><!-- Fourth collumn -->
-			<img src="http://placehold.it/500x3000" class="img-responsive">
-		</div><!-- Fourth collumn -->
+		<div class="col-md-2 col-xs-4 columns"><!-- Fourth column -->
+			<div class="column-overlay">
+				<?php
+					if( get_field('column-image3') ): ?>
+						<img src="<?php the_field('column-image3'); ?>" class="img-responsive" />
+						<?php 
+					endif;
+				?>
+				
+				<div class="text-overlay">
+					<div class="col-md-12 col-xs-12">
+						<?php
+							if( get_field('title-2') ): ?>
+								<h2><?php the_field('title-2'); ?></h2>
+							<?php 
+							endif;
+						?>
+						
+						<?php
+							if( get_field('subtitle-2') ): ?>
+								<p><?php the_field('subtitle-2'); ?></p>
+							<?php 
+							endif;
+						?>
+					</div>
+				</div>
+			</div><!-- column overlay -->		
+		</div><!-- Fourth column -->
 		
-		<div class="col-md-2 col-xs-4"><!-- Fifth collumn -->
-			<img src="http://placehold.it/500x3000" class="img-responsive">
-		</div><!-- Fifth collumn -->
+		<div class="col-md-2 col-xs-4 columns"><!-- Fifth column -->
+			<div class="column-overlay">
+				<?php
+					if( get_field('column-image4') ): ?>
+						<img src="<?php the_field('column-image4'); ?>" class="img-responsive" />
+						<?php 
+					endif;
+				?>
+				
+				<div class="text-overlay">
+					<div class="col-md-12 col-xs-12">
+						<?php
+							if( get_field('title-3') ): ?>
+								<h2><?php the_field('title-3'); ?></h2>
+							<?php 
+							endif;
+						?>
+						
+						<?php
+							if( get_field('subtitle-3') ): ?>
+								<p><?php the_field('subtitle-3'); ?></p>
+							<?php 
+							endif;
+						?>
+					</div>
+				</div>
+			</div><!-- column overlay -->
+		</div><!-- Fifth column -->
 			
-		<div class="col-md-2 col-xs-4"><!-- Sixth collumn -->
-			<img src="http://placehold.it/500x3000" class="img-responsive">
-		</div><!-- Sixth collumn -->		
+		<div class="col-md-2 col-xs-4 columns"><!-- Sixth column -->
+			<div class="column-overlay">
+				<?php
+					if( get_field('column-image5') ): ?>
+						<img src="<?php the_field('column-image5'); ?>" class="img-responsive" />
+						<?php 
+					endif;
+				?>
+				
+				<div class="text-overlay">
+					<div class="col-md-12 col-xs-12">
+						<?php
+							if( get_field('title-4') ): ?>
+								<h2><?php the_field('title-4'); ?></h2>
+							<?php 
+							endif;
+						?>
+						
+						<?php
+							if( get_field('subtitle-4') ): ?>
+								<p><?php the_field('subtitle-4'); ?></p>
+							<?php 
+							endif;
+						?>
+					</div>
+				</div>
+			</div><!-- column overlay -->
+		</div><!-- Sixth column -->		
 		
 	</div> <!-- row -->
 
