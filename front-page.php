@@ -40,7 +40,7 @@ get_header(); ?>
 			<div class="col-md-12">
 			
 				<?php
-					query_posts('cat=news&posts_per_page=6');
+					query_posts('cat=news&posts_per_page=5');
 					while (have_posts()) : the_post();
 						?>	<div class="news-overlay"> <?php
 						// check if the post has a Post Thumbnail assigned to it.
@@ -124,6 +124,7 @@ get_header(); ?>
 							<?php 
 							endif;
 						?>
+						<a href="<?php if( get_field('link-1') ): the_field('link-1'); endif; ?>" class="btn btn-default">View <span class="glyphicon glyphicon-chevron-right"></span></a>
 					</div>
 				</div>
 			</div><!-- column overlay -->
@@ -153,6 +154,7 @@ get_header(); ?>
 							<?php 
 							endif;
 						?>
+						<a href="<?php if( get_field('link-2') ): the_field('link-2'); endif; ?>" class="btn btn-default">View <span class="glyphicon glyphicon-chevron-right"></span></a>
 					</div>
 				</div>
 			</div><!-- column overlay -->		
@@ -182,6 +184,7 @@ get_header(); ?>
 							<?php 
 							endif;
 						?>
+						<a href="<?php if( get_field('link-3') ): the_field('link-3'); endif; ?>" class="btn btn-default">View <span class="glyphicon glyphicon-chevron-right"></span></a>
 					</div>
 				</div>
 			</div><!-- column overlay -->
@@ -211,6 +214,7 @@ get_header(); ?>
 							<?php 
 							endif;
 						?>
+						<a href="<?php if( get_field('link-4') ): the_field('link-4'); endif; ?>" class="btn btn-default">View <span class="glyphicon glyphicon-chevron-right"></span></a>
 					</div>
 				</div>
 			</div><!-- column overlay -->
