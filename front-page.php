@@ -40,29 +40,43 @@ get_header(); ?>
 			<div class="col-md-12">
 			
 				<?php
-					query_posts('cat=news&posts_per_page=5');
-					while (have_posts()) : the_post();
+					//THE QUERY FOR NEWS
+					// arguments for the new query
+					$args = array(
+					'category_name' => 'news',
+					'posts_per_page' => 5
+					// you could use the id to
+					// 'cat' => 2 or whatever is the id for your category
+					); 
+		
+					$wp_query_news = new WP_Query($args);
+
+				
+			
+				if($wp_query_news->have_posts()):
+					while ($wp_query_news->have_posts()) : $wp_query_news->the_post();
 						?>	<div class="news-overlay"> <?php
-						// check if the post has a Post Thumbnail assigned to it.
-						if ( has_post_thumbnail() ) {
-							?>
-								
-								<a href="<?php echo get_permalink(); ?>"> <?php the_post_thumbnail( 'single-post-thumbnail', array('class' => 'img-responsive')); ?> </a> <?php
-						}					
-						?> 			
-								<div class="news-text-overlay">
-									<div class="date">
-										<?php the_date(); ?>
-									</div>
-									<div class="title">
-										<a href="<?php echo get_permalink(); ?>"><p> <?php the_title(); ?> </p></a>
-									</div>									
-								</div> <!--news-text-overlay-->	
-							</div> <!--news-overlay-->
+							// check if the post has a Post Thumbnail assigned to it.
+							if ( has_post_thumbnail() ) {
+								?><a href="<?php echo get_permalink(); ?>"> <?php the_post_thumbnail( 'single-post-thumbnail', array('class' => 'img-responsive')); ?> </a> <?php
+							}
+							
+						?>
+							
+							<div class="news-text-overlay">
+								<div class="date">
+									<?php the_date(); ?>
+								</div>
+								<div class="title">
+									<a href="<?php echo get_permalink(); ?>"><p> <?php the_title(); ?> </p></a>
+								</div>									
+							</div> <!--news-text-overlay-->
+							
+						</div><!-- news-overlay -->
 						<?php
 					endwhile;
-				?>
-				<?php wp_reset_query();  // Restore global post data stomped by the_post(). ?>
+				endif; 
+				wp_reset_query(); ?>
 				
 				
 			</div> <!--col-md-12-->

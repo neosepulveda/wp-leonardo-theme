@@ -53,6 +53,10 @@ p {
 	background: #FFFFFF url("images/page_bkgd2.png") repeat-x 0 0;
 }
 
+.row-background{
+	background: #FFFFFF url("images/page_bkgd2.png") repeat-x 0 0;
+}
+
 .header-container {
 	width:100%;
 }
@@ -201,23 +205,24 @@ p {
 	font-family: HelveticaNeue,arial,serif;
 }
 
-.btn-custom {
-  background-color: hsl(0, 0%, 84%) !important;
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#127127127", endColorstr="#d6d6d6");
-  background-image: -khtml-gradient(linear, left top, left bottom, from(#127127127), to(#d6d6d6));
-  background-image: -moz-linear-gradient(top, #127127127, #d6d6d6);
-  background-image: -ms-linear-gradient(top, #127127127, #d6d6d6);
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #127127127), color-stop(100%, #d6d6d6));
-  background-image: -webkit-linear-gradient(top, #127127127, #d6d6d6);
-  background-image: -o-linear-gradient(top, #127127127, #d6d6d6);
-  background-image: linear-gradient(#127127127, #d6d6d6);
-  border-color: #d6d6d6 #d6d6d6 hsl(0, 0%, 76%);
-  color: #333 !important;
-  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.52);
-  -webkit-font-smoothing: antialiased;
+.gallery-title  {
+	text-transform: uppercase;
+	font-size:36px;
+	padding-left: 0.3em;
 }
 
+.gallery-logo h1 {
+	padding: 20px;
+	font-size: 100px;
+	opacity: 0.2;
+    filter: alpha(opacity=20); /* For IE8 and earlier */
+	color: #000000;
+	text-transform: uppercase;
+}
+
+.row-gallery {
+	padding-left: 2em;
+}
 
 /* TWITTER COLUMN */
 .img-overlay {
@@ -245,6 +250,12 @@ p {
 	line-height: 1.5;
 	text-transform: uppercase;
 	color: #f5f5f5;
+}
+
+.about-text p{
+	font-size: 16px;
+	font-family: Arial;
+	text-align: justify;
 }
 
 
