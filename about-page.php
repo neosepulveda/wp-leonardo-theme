@@ -115,6 +115,11 @@ wp_reset_query();  // Restore global post data stomped by the_post().
 								wp_reset_query(); ?>
 							</div> <!--about-text-->
 						</div> <!--col8-->
+						<div class="col-md-2">
+							<div class="img-rose">
+								<?php if( get_field('portrait-about') ): ?> <img src="<?php the_field('portrait-about'); ?>" class="img-responsive"/>	<?php endif; ?>
+							</div>
+						</div>
 					</div><!--container-gallery-->
 				</div><!--col-12-->
 			</div><!--row-->	
