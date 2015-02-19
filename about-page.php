@@ -10,12 +10,12 @@ wp_reset_query();  // Restore global post data stomped by the_post().
 ?>
 
 	<div class="row row-background">
-		<div class="col-md-2 col-xs-2 firstCol">  <!-- First collumn -->
+		<div class="col-md-2 col-xs-4 firstCol">  <!-- First collumn -->
 			<div class="header-container">
 				<div class="header-logo">
 					<?php						
 						if( get_field('headerimage-about') ): ?>
-							<img src="<?php the_field('headerimage-about'); ?>" class="img-responsive" />
+							<a href="<?php echo get_page_link('27'); ?>"><img src="<?php the_field('headerimage-about'); ?>" class="img-responsive" /></a>
 							<?php 
 						endif;
 					?>
@@ -87,7 +87,7 @@ wp_reset_query();  // Restore global post data stomped by the_post().
 			</div> <!-- posts-container -->
 		</div> <!-- First collumn -->
 		
-		<div class="col-md-10 col-xs-10 columns"><!-- Second column -->
+		<div class="col-md-10 col-xs-8 columns"><!-- Second column -->
 			<div class="row">
 				<div class="col-md-12 col-xs-12">
 					<div class="container" id="container-gallery">
@@ -95,7 +95,7 @@ wp_reset_query();  // Restore global post data stomped by the_post().
 							<h1>About Me</h1>
 						</div>
 
-						<div class="col-md-8 col-xs-8">
+						<div class="col-md-8 col-xs-12">
 							<div class="about-text">
 						
 								<?php

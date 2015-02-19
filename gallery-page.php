@@ -10,12 +10,12 @@ wp_reset_query();  // Restore global post data stomped by the_post().
 ?>
 
 	<div class="row row-background">
-		<div class="col-md-2 col-xs-2 firstCol">  <!-- First collumn -->
+		<div class="col-md-2 col-xs-4 firstCol">  <!-- First collumn -->
 			<div class="header-container">
 				<div class="header-logo">
 					<?php						
 						if( get_field('headerimage-gallery') ): ?>
-							<img src="<?php the_field('headerimage-gallery'); ?>" class="img-responsive" />
+							<a href="<?php echo get_page_link('27'); ?>"><img src="<?php the_field('headerimage-gallery'); ?>" class="img-responsive" /></a>
 							<?php 
 						endif;
 					?>
@@ -87,7 +87,7 @@ wp_reset_query();  // Restore global post data stomped by the_post().
 			</div> <!-- posts-container -->
 		</div> <!-- First collumn -->
 		
-		<div class="col-md-10 col-xs-10 columns"><!-- Second column -->
+		<div class="col-md-10 col-xs-8 columns"><!-- Second column -->
 			<div class="row">
 				<div class="col-md-12 col-xs-12">
 					<div class="container">
@@ -108,7 +108,7 @@ wp_reset_query();  // Restore global post data stomped by the_post().
 							
 								while ($wp_query_television->have_posts()) : $wp_query_television->the_post();
 									?>
-										<div class="col-md-2 col-xs-2">
+										<div class="col-md-2 col-xs-6">
 											<div class="news-overlay">
 												<?php
 													// check if the post has a Post Thumbnail assigned to it.
@@ -148,7 +148,7 @@ wp_reset_query();  // Restore global post data stomped by the_post().
 							
 								while ($wp_query_ltl1->have_posts()) : $wp_query_ltl1->the_post();
 									?>
-										<div class="col-md-2 col-xs-2">
+										<div class="col-md-2 col-xs-6">
 											<div class="news-overlay">
 												<?php
 													// check if the post has a Post Thumbnail assigned to it.
@@ -187,7 +187,7 @@ wp_reset_query();  // Restore global post data stomped by the_post().
 							
 								while ($wp_query_ltl2->have_posts()) : $wp_query_ltl2->the_post();
 									?>
-										<div class="col-md-2 col-xs-2">
+										<div class="col-md-2 col-xs-6">
 											<div class="news-overlay">
 												<?php
 													// check if the post has a Post Thumbnail assigned to it.
@@ -227,7 +227,7 @@ wp_reset_query();  // Restore global post data stomped by the_post().
 							
 								while ($wp_query_ltl3->have_posts()) : $wp_query_ltl3->the_post();
 									?>
-										<div class="col-md-2 col-xs-2">
+										<div class="col-md-2 col-xs-6">
 											<div class="news-overlay">
 												<?php
 													// check if the post has a Post Thumbnail assigned to it.
@@ -266,7 +266,7 @@ wp_reset_query();  // Restore global post data stomped by the_post().
 							
 								while ($wp_query_publishing->have_posts()) : $wp_query_publishing->the_post();
 									?>
-										<div class="col-md-2 col-xs-2">
+										<div class="col-md-2 col-xs-6">
 											<div class="news-overlay">
 												<?php
 													// check if the post has a Post Thumbnail assigned to it.
@@ -304,7 +304,7 @@ wp_reset_query();  // Restore global post data stomped by the_post().
 							
 								while ($wp_query_apps->have_posts()) : $wp_query_apps->the_post();
 									?>
-										<div class="col-md-2 col-xs-2">
+										<div class="col-md-2 col-xs-6">
 											<div class="news-overlay">
 												<?php
 													// check if the post has a Post Thumbnail assigned to it.
