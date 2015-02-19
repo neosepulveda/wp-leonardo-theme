@@ -11,7 +11,7 @@ get_header(); ?>
 				<div class="header-logo">
 					<?php
 						if( get_field('headerimg') ): ?>
-							<img src="<?php the_field('headerimg'); ?>" class="img-responsive" />
+							<a href="<?php echo get_page_link('27'); ?>"><img src="<?php the_field('headerimg'); ?>" class="img-responsive" /></a>
 							<?php 
 						endif;
 					?>
@@ -138,7 +138,7 @@ get_header(); ?>
 							<?php 
 							endif;
 						?>
-						<a href="<?php if( get_field('link-1') ): the_field('link-1'); endif; ?>" class="btn btn-default">View <span class="glyphicon glyphicon-chevron-right"></span></a>
+						<a href="<?php if( get_field('link-1') ): the_field('link-1'); endif; ?>" class="btn btn-default" target='_blank'>View <span class="glyphicon glyphicon-chevron-right"></span></a>
 					</div>
 				</div>
 			</div><!-- column overlay -->
@@ -168,7 +168,7 @@ get_header(); ?>
 							<?php 
 							endif;
 						?>
-						<a href="<?php if( get_field('link-2') ): the_field('link-2'); endif; ?>" class="btn btn-default">View <span class="glyphicon glyphicon-chevron-right"></span></a>
+						<a href="<?php if( get_field('link-2') ): the_field('link-2'); endif; ?>" class="btn btn-default" target='_blank'>View <span class="glyphicon glyphicon-chevron-right"></span></a>
 					</div>
 				</div>
 			</div><!-- column overlay -->		
@@ -198,7 +198,7 @@ get_header(); ?>
 							<?php 
 							endif;
 						?>
-						<a href="<?php if( get_field('link-3') ): the_field('link-3'); endif; ?>" class="btn btn-default">View <span class="glyphicon glyphicon-chevron-right"></span></a>
+						<a href="<?php if( get_field('link-3') ): the_field('link-3'); endif; ?>" class="btn btn-default" target='_blank'>View <span class="glyphicon glyphicon-chevron-right"></span></a>
 					</div>
 				</div>
 			</div><!-- column overlay -->
@@ -228,7 +228,7 @@ get_header(); ?>
 							<?php 
 							endif;
 						?>
-						<a href="<?php if( get_field('link-4') ): the_field('link-4'); endif; ?>" class="btn btn-default">View <span class="glyphicon glyphicon-chevron-right"></span></a>
+						<a href="<?php if( get_field('link-4') ): the_field('link-4'); endif; ?>" class="btn btn-default" target='_blank'>View <span class="glyphicon glyphicon-chevron-right"></span></a>
 					</div>
 				</div>
 			</div><!-- column overlay -->
