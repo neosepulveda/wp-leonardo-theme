@@ -67,8 +67,8 @@ p {
 }
 
 .header-logo {
-	padding-top: 2em;
-	padding-bottom: 2em;
+	padding-top: 2vmin;
+	padding-bottom: 2vmin;
 }
 .header-logo:hover {
 	
@@ -81,11 +81,17 @@ p {
 	
 }
 
+#sn-size {
+	font-size: 4vmin;
+}
+
 
 .navigation-menu ul{
 	list-style-type: none;
 	margin: 0;
-	padding:15px;
+	padding-left: 15px;
+	padding-top: 2vmin;
+	padding-bottom: 2vmin;
 }
 
 .navigation-menu ul li{
@@ -96,7 +102,7 @@ p {
 	color: #4B4D4F;
 	font-family: UniSansSemiBold,Arial;
 	text-transform: uppercase;
-	font-size: 1vw;
+	font-size: 2vmin;
 	text-decoration: none;
 }
 
@@ -112,14 +118,14 @@ p {
 	color: #4B4D4F;
 	font-family: UniSansSemiBold,Arial;
 	text-transform: uppercase;
-	font-size: 1vw;
-	padding-top:2em;
+	font-size: 2vmin;
+	padding-top:2vmin;
 }
 
 .news-overlay {
 	position: relative;
 	float: left;
-	margin: 0 10px 10px 0;
+	margin: 0 0.1vmin 0.7vmin 0;
 }
 
 .news-overlay:hover{
@@ -129,19 +135,18 @@ p {
 
 .news-text-overlay {
 	position: absolute;
-	bottom: 10px;
+	bottom: 1vmin;
 	left: 0;
 	width: 100%;
-	min-height: 31px;
-	padding: 5px;
+	padding: 0.3vmin;
 	background-color: rgba(0,0,0,0.7);
 }
 
 .title {
-	font-size: 0.8vw;
+	font-size: 1.5vmin;
 	color: #FFFFFF;
 	text-transform: uppercase;
-}
+}	
 
 .title a {
 	color: #FFFFFF;
@@ -160,8 +165,12 @@ p {
 	color: rgb(0,0,0,0.5);
 }
 
+.title a p{
+	margin: 0 0 0;
+}
+
 .date {
-	font-size: 0.7vw;
+	font-size: 1.3vmin;
 	color: #8EA1A5;
 }
 
@@ -194,17 +203,17 @@ p {
 
 .text-overlay h2 {
 	text-transform: uppercase;
-	font-size: 2vw;
+	font-size: 4vmin;
 }
 
 .text-overlay p {
-	font-size: 0.9vw;
+	font-size: 2vmin;
 	font-family: HelveticaNeue,arial,serif;
 }
 
 .gallery-title  {
 	text-transform: uppercase;
-	font-size:36px;
+	font-size:4vmin;
 	padding-left: 0.3em;
 }
 
@@ -238,12 +247,12 @@ p {
 }
 
 .heading-text {
-	padding-top: 2em;
-	padding-bottom: 2em;
+	padding-top: 2vmin;
+	padding-bottom: 2vmin;
 }
 
 .heading-text p {
-	font-size: 1.2vh;
+	font-size: 1.7vmin;
 	text-transform: uppercase;
 	color: #f5f5f5;
 }
@@ -254,11 +263,15 @@ p {
 	text-align: justify;
 }
 
+.col-gallery-about {
+	padding-left: 0vmin;
+}
+
 
 
 /* TWITTER STYLE */
 .twitter-widget-container {
-	padding-top: 1em;
+	padding-top: 1vmin;
 	background-color: rgba(0,0,0,0.5);
 	padding-left: 5px;
 	height: 50%;
@@ -268,6 +281,10 @@ p {
 	height:100%;
 }
 
+.twitter-widget-container iframe  p{
+	font-size: 1vmin;
+}
+
 .twitter-button-container {
-	padding-top: 1em;
+	padding-top: 1vmin;
 }

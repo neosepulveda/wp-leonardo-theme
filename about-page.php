@@ -27,9 +27,9 @@ wp_reset_query();  // Restore global post data stomped by the_post().
 			
 				<div class="social-network">
 					<div class="col-md-12 col-xs-12">
-						<a href="https://www.facebook.com/infinityhouse14"><i class="fa fa-facebook-square fa-2x"></i></a>
-						<a href="https://twitter.com/infinityhouseuk"><i class="fa fa-twitter-square fa-2x"></i></a>
-						<a href="https://www.pinterest.com/infinityhouse14/"><i class="fa fa-pinterest-square fa-2x"></i></a>
+						<a href="https://www.facebook.com/infinityhouse14"><i class="fa fa-facebook-square fa-2x" id="sn-size"></i></a>							
+						<a href="https://twitter.com/infinityhouseuk"><i class="fa fa-twitter-square fa-2x" id="sn-size"></i></a>
+						<a href="https://www.pinterest.com/infinityhouse14/"><i class="fa fa-pinterest-square fa-2x" id="sn-size"></i></a>
 					</div>				
 				</div>
 				
@@ -87,7 +87,7 @@ wp_reset_query();  // Restore global post data stomped by the_post().
 			</div> <!-- posts-container -->
 		</div> <!-- First collumn -->
 		
-		<div class="col-md-10 col-xs-8 columns"><!-- Second column -->
+		<div class="col-md-10 col-xs-8 columns col-gallery-about"><!-- Second column -->
 			<div class="row">
 				<div class="col-md-12 col-xs-12">
 					<div class="container" id="container-gallery">
