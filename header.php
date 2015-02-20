@@ -24,6 +24,29 @@
 
     <?php wp_enqueue_script("jquery"); ?>
     <?php wp_head(); ?>
+	
+	<script>
+	
+		function rfun() {
+			width = $(window).width();
+			height = $(window).height();
+      
+			// Executing Both width() and height()   
+			$(document).getElementById('widthID').innerHTML=width; 
+			$(document).getElementById('heightID').innerHTML=height; 
+
+			// Do a custom code here
+			if(width <= 480){
+			$(document).getElementById('widthID').innerHTML+=" -> This is an Iphone Screen Size"; 
+			}
+		}
+	
+		 // load() event and resize() event are combined 
+		$(window).ready(rfun).resize(rfun); 
+		
+		
+	</script>
+	
 </head>
 
 	<div class="container">
